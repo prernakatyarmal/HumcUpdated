@@ -1,0 +1,431 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    tools:context="com.hackensack.umc.activity.DoctorSearchActivity"
+    android:background="@color/light_grey"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:id="@+id/relative_my_doctor">-->
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        card_view:cardElevation="4dp"
+        android:id="@+id/relative_my_doctor"
+        android:layout_margin="5dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/my_doctor"
+            android:textColor="@color/black"
+            android:padding="15dp"
+            android:gravity="left"
+            android:layout_centerVertical="true"
+            android:drawableRight="@drawable/grey_arow"
+            android:background="@color/white"/>
+
+        <!--<ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/grey_arow"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="15dp" />-->
+
+    </android.support.v7.widget.CardView>
+
+    <!--</RelativeLayout>-->
+
+    <!--<TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/doctor_search_text"
+            android:id="@+id/input_hint_text"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:gravity="left"
+            android:layout_below="@id/relative_my_doctor"/>-->
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/relative_my_doctor"
+        android:id="@+id/scrollView"
+        >
+    
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/login_linear_layout"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/doctor_search_text"
+                android:id="@+id/input_hint_text"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:gravity="left"
+                android:visibility="gone"/>
+
+            <!--<RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="5dp">-->
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="3dp"
+                android:gravity="center_horizontal"
+                card_view:cardElevation="4dp"
+                android:layout_margin="5dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/spcialty_linear"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Specialty"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="0dp"
+                        android:gravity="left"
+                        android:id="@+id/specialty_label"/>
+
+                    <EditText
+                        android:id="@+id/edittext_specialty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/select_str"
+                        android:layout_gravity="center_vertical"
+                        android:drawableRight="@drawable/spinner_arrow"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/zip_code"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="0dp"
+                        android:gravity="left"
+                        android:id="@+id/zipcode_label"
+                        />
+
+                    <EditText
+                        android:id="@+id/edittext_zipcode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="@string/enter_str"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:layout_gravity="center_vertical"
+                        />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/gender"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="0dp"
+                        android:gravity="left"
+                        android:id="@+id/gender_label"
+                        />
+
+                    <EditText
+                        android:id="@+id/edittext_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/select_str"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:drawableRight="@drawable/spinner_arrow"/>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/firstname_text"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="0dp"
+                        android:gravity="left"
+                        android:id="@+id/firstname_label"
+                        />
+
+                    <EditText
+                        android:id="@+id/edittext_first_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="@string/first_name_hint"
+                        android:singleLine="true"
+                        android:inputType="text"
+                        android:layout_gravity="center_vertical"/>
+
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/lastname_text"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="0dp"
+                        android:gravity="left"
+                        android:id="@+id/lastname_label"
+                        />
+
+                    <EditText
+                        android:id="@+id/edittext_last_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="@string/last_name_hint"
+                        android:singleLine="true"
+                        android:inputType="text"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <!--<ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/spinner_arrow"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"/>-->
+
+            </android.support.v7.widget.CardView>
+            <!--</RelativeLayout>-->
+
+            <!--<EditText
+                android:id="@+id/edittext_WithIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="false"
+                android:layout_margin="10dp"
+                android:hint="Search Within"
+                android:layout_gravity="center_vertical"/>-->
+
+
+            <!--<RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="5dp">
+
+                <EditText
+                    android:id="@+id/edittext_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="false"
+                    android:hint="Gender"
+                    android:layout_gravity="center_vertical"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/spinner_arrow"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"/>
+
+            </RelativeLayout>-->
+
+            <!--<EditText
+                android:id="@+id/edittext_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="false"
+                android:layout_margin="10dp"
+                android:hint="Date"
+                android:layout_gravity="center_vertical"/>-->
+
+
+            <!--<EditText
+                android:id="@+id/edittext_first_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="5dp"
+                android:hint="First Name"
+                android:singleLine="true"
+                android:inputType="text"
+                android:layout_gravity="center_vertical"/>
+
+
+            <EditText
+                android:id="@+id/edittext_last_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="5dp"
+                android:hint="Last Name"
+                android:singleLine="true"
+                android:inputType="text"
+                android:layout_gravity="center_vertical"/>-->
+
+            <!--<Spinner
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/speciality_spinner"
+                android:layout_centerHorizontal="true"
+                android:spinnerMode="dialog"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_margin="10dp"
+                />-->
+
+           <!-- <com.hackensack.umc.customview.CustomSpinner
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/speciality_spinner"
+                android:layout_centerHorizontal="true"
+                android:spinnerMode="dialog"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_margin="10dp"
+                android:prompt="0"
+                />-->
+
+            <!--<Spinner
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/searchwithin_spinner"
+                android:layout_centerHorizontal="true"
+                android:spinnerMode="dialog"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_margin="10dp"
+                />
+
+            <Spinner
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/gender_spinner"
+                android:layout_centerHorizontal="true"
+                android:spinnerMode="dialog"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_margin="10dp"
+                />
+
+            <Spinner
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/date_spinner"
+                android:layout_centerHorizontal="true"
+                android:spinnerMode="dialog"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_margin="10dp"/>
+
+            <TextView
+                android:id="@+id/date_textview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:hint=" Date"
+                android:layout_margin="10dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>-->
+
+            <!--<android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">-->
+
+                <!--<EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/zip_code"
+                    android:id="@+id/zipcode_edittext"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="10dp"
+                    android:inputType="number"
+                    />-->
+
+            <!--</android.support.design.widget.TextInputLayout>-->
+
+            <!--<android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">-->
+
+               <!-- <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/firstname_text"
+                    android:id="@+id/firstname_edittext"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="10dp"
+                    />-->
+
+            <!--</android.support.design.widget.TextInputLayout>-->
+
+            <!--<android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">-->
+
+                <!--<EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/lastname_text"
+                    android:id="@+id/lastname_edittext"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="10dp"
+                    />-->
+
+            <!--</android.support.design.widget.TextInputLayout>-->
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

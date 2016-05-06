@@ -1,0 +1,315 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.hackensack.umc.activity.InsuranceInfoActivity">
+
+    <ScrollView
+        android:id="@+id/reg_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding10"
+                android:layout_marginRight="@dimen/padding10"
+                android:layout_marginTop="@dimen/padding10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/plan_prov_hint_str"
+                    android:textSize="@dimen/text_small" />
+
+                <EditText
+                    android:id="@+id/plan_prov_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/required_str"
+                    android:textColorHint="@color/profile_manual_grey" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding10"
+                android:layout_marginRight="@dimen/padding10"
+                android:layout_marginTop="@dimen/padding10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/grp_no_hint_str"
+                    android:textSize="@dimen/text_small" />
+
+                <EditText
+                    android:id="@+id/grp_no_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enter_str"
+                    android:textColorHint="@color/profile_manual_grey" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding10"
+                android:layout_marginRight="@dimen/padding10"
+                android:layout_marginTop="@dimen/padding10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/subscriberId_str"
+                    android:textSize="@dimen/text_small" />
+
+                <EditText
+                    android:id="@+id/subscriberId_edt_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enter_str"
+                    android:textColorHint="@color/profile_manual_grey" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding10"
+                android:layout_marginRight="@dimen/padding10"
+                android:layout_marginTop="@dimen/padding10"
+                android:orientation="vertical"
+              >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/subscribername"
+                    android:textSize="@dimen/text_small"
+                   />
+
+                <EditText
+                    android:id="@+id/edtSubscriberName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enter_str"
+                    android:textColorHint="@color/profile_manual_grey" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding10"
+                android:layout_marginRight="@dimen/padding10"
+                android:layout_marginTop="@dimen/padding10"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/date_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                  >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/subscriber_birthDate"
+                        android:textSize="@dimen/text_small" />
+
+
+                    <EditText
+                        android:id="@+id/date_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/enter_str"
+                        android:textColorHint="@color/profile_manual_grey" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginRight="@dimen/padding10"
+                        android:background="@color/profile_manual_grey"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding10"
+                android:layout_marginRight="@dimen/padding10"
+                android:layout_marginTop="@dimen/padding10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/member_number"
+                    android:textSize="@dimen/text_small" />
+
+                <EditText
+                    android:id="@+id/edtMemberNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enter_str"
+                    android:inputType="number"
+                    android:textColorHint="@color/profile_manual_grey" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding10"
+                android:layout_marginRight="@dimen/padding10"
+                android:layout_marginTop="@dimen/padding10"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/grp_name_hint_str"
+                    android:textSize="@dimen/text_small" />
+
+                <EditText
+                    android:id="@+id/grp_name_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enter_str"
+                    android:textColorHint="@color/profile_manual_grey" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding10"
+                android:layout_marginRight="@dimen/padding10"
+                android:layout_marginTop="@dimen/padding10"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/coverage_hint_str"
+                    android:textSize="@dimen/text_small" />
+
+                <EditText
+                    android:id="@+id/cov_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enter_str"
+                    android:textColorHint="@color/profile_manual_grey" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding10"
+                android:layout_marginRight="@dimen/padding10"
+                android:layout_marginTop="@dimen/padding10"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/plan_type_hint_str"
+                    android:textSize="@dimen/text_small" />
+
+                <EditText
+                    android:id="@+id/plan_type_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enter_str"
+                    android:textColorHint="@color/profile_manual_grey" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/insurance_img_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/insurance_img"
+                    style="@style/profile_image_view"
+                    android:layout_gravity="center"
+
+                    android:layout_width="match_parent"/>
+
+                <TextView
+                    android:id="@+id/insurance_img_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/padding15"
+                    android:text="@string/insurance_img_label"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            </LinearLayout>
+            ////
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding10"
+                android:layout_marginRight="@dimen/padding10"
+                android:layout_marginTop="@dimen/padding10"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/reference_str"
+                    android:textSize="@dimen/text_small" />
+
+                <EditText
+                    android:id="@+id/reference_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enter_str"
+                    android:textColorHint="@color/profile_manual_grey" />
+            </LinearLayout>
+
+            ///
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

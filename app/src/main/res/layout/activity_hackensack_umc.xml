@@ -1,0 +1,257 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey">
+
+<RelativeLayout  android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey">
+
+
+    <!--<ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView2"
+
+        />
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="fill_parent"
+        android:background="@color/white">-->
+
+   <!-- <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:id="@+id/hospital_imageView"
+        android:background="@drawable/hospital"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        />-->
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/activity_toolbar"
+        />
+
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryColor"
+        android:id="@+id/header_relative_layout"
+        android:elevation="10dp"
+        android:paddingTop="5dp"
+        >
+
+        &lt;!&ndash;<ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/hospital_imageView"
+            android:background="@drawable/hospital"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:visibility="gone" />&ndash;&gt;
+
+        &lt;!&ndash;<ImageView&ndash;&gt;
+            &lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;
+            &lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;
+            &lt;!&ndash;android:background="@drawable/circle_image"&ndash;&gt;
+            &lt;!&ndash;android:layout_alignParentLeft="true"&ndash;&gt;
+            &lt;!&ndash;android:layout_above="@+id/linear_layout_button"&ndash;&gt;
+            &lt;!&ndash;android:layout_marginLeft="20dp"&ndash;&gt;
+            &lt;!&ndash;android:elevation="2dp"&ndash;&gt;
+            &lt;!&ndash;/>&ndash;&gt;
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/top_header">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:id="@+id/relative_action_bar"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/drawer_icon"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/drawer_menu"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/logo"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_imageView"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/user"
+                android:layout_below="@id/relative_action_bar" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/user_imageView"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/relative_action_bar">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Hi Guest,"
+                    android:id="@+id/user_name_text"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/welcome_message"
+                    android:id="@+id/welcome_text"
+                    android:layout_below="@+id/user_name_text"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        &lt;!&ndash;<LinearLayout
+            android:id="@+id/linear_layout_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_below="@+id/welcome_text"
+            android:layout_margin="5dp" >&ndash;&gt;
+
+            &lt;!&ndash;<Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="REGISTER"
+                android:id="@+id/register_button"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+
+                android:layout_marginRight="5dp" />&ndash;&gt;
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LOGIN"
+                android:id="@+id/login_button"
+                android:textColor="@color/white"
+                android:layout_below="@id/top_header"
+                android:layout_margin="20dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:background="@color/profile_proceed_green"/>
+
+        &lt;!&ndash;</LinearLayout>&ndash;&gt;
+
+       &lt;!&ndash; <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView2"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/user_imageView"
+            android:layout_alignStart="@+id/user_imageView" />
+&ndash;&gt;
+
+        &lt;!&ndash;
+        Button
+        android:elevation="2dp"
+        android:background="@drawable/home_button_background"&ndash;&gt;
+
+    </RelativeLayout>-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tool_bar"
+        />
+
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:id="@+id/first_layout"
+            android:layout_below="@+id/header_relative_layout">
+
+            <include layout="@layout/grid_item" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_weight="1" />
+
+            <include layout="@layout/grid_item" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:id="@+id/seond_layout"
+            android:layout_below="@+id/first_layout">
+
+            <include layout="@layout/grid_item" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_weight="1" />
+
+            <include layout="@layout/grid_item" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_weight="1" />
+
+        </LinearLayout>-->
+
+</RelativeLayout>
+
+    <ListView
+        android:id="@+id/navList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|start"
+        android:background="@color/light_grey"
+        />
+
+<!--    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/semi_tranparent_black">
+
+    </RelativeLayout>-->
+
+</android.support.v4.widget.DrawerLayout>
+
+
+<!--</RelativeLayout>-->

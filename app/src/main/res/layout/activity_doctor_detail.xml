@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/top_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/light_grey"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <!--<RelativeLayout
+        android:id="@+id/header_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/primaryColor">
+
+        <ImageView
+            android:id="@+id/back_img"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:padding="15dp"
+            android:src="@drawable/back_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_toRightOf="@+id/back_img"
+            android:gravity="center_vertical"
+            android:text="Doctor Details"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/done_img"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:foregroundGravity="center_vertical"
+            android:padding="15dp"
+            android:src="@drawable/done_icon" />
+
+    </RelativeLayout>-->
+
+    <!--    <TextView
+            android:id="@+id/select_time_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header_action_bar"
+            android:background="@color/primaryColor"
+            android:paddingBottom="5dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:text="@string/select_time_slot_text"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/light_blue" />-->
+
+    <RelativeLayout
+        android:id="@+id/header_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:paddingTop="5dp">
+
+        <ImageView
+            android:id="@+id/doctor_img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:src="@drawable/male" />
+
+        <TextView
+            android:id="@+id/speciality_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/doctor_img"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/name_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/speciality_text"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/doctor_img"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:id="@+id/address_one_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name_text"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/doctor_img"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/direction_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/address_one_text"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/doctor_img"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <!-- <RelativeLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_toRightOf="@+id/doctor_img"
+             android:layout_below="@+id/direction_text"
+             android:layout_margin="2dp">
+
+             <ImageView
+                 android:id="@+id/phone_img"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:src="@drawable/phone_icon"
+                 android:layout_margin="2dp"/>
+
+             <TextView
+                 android:id="@+id/telecom_text"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:textAppearance="?android:attr/textAppearanceSmall"
+                 android:textColor="@color/light_blue"
+                 android:layout_toRightOf="@+id/phone_img"
+                 android:text="99999999"
+                 android:layout_centerVertical="true"
+                 android:gravity="center_vertical"
+                 android:layout_margin="2dp"
+                 android:paddingBottom="2dp"/>
+         </RelativeLayout>-->
+        <TextView
+            android:id="@+id/dd_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/direction_text"
+            android:layout_toRightOf="@+id/doctor_img"
+            android:drawableLeft="@drawable/phone_icon"
+            android:drawablePadding="@dimen/padding5"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/primaryColor"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <!--<include
+        android:id="@+id/doctor_common_ll"
+        layout="@layout/doctor_contact_common"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_relative_layout"
+        />-->
+
+
+    <View
+        android:id="@+id/dummy_view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/header_relative_layout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/profile_manual_grey" />
+
+    <TextView
+        android:id="@+id/select_time_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dummy_view1"
+        android:background="@color/white"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:text="@string/select_time_slot_text"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/black" />
+
+    <com.hackensack.umc.customview.SlidingTabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/select_time_text"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@color/white" />
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tabs"
+        android:background="@color/light_grey">
+
+        <!-- &lt;!&ndash;
+         This title strip will display the currently visible page title, as well as the page
+         titles for adjacent pages.
+         &ndash;&gt;
+
+         <android.support.v4.view.PagerTitleStrip
+             android:id="@+id/pager_title_strip"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_gravity="top"
+             android:background="@color/common_action_bar_splitter"
+             android:paddingBottom="40dp"
+             android:paddingTop="40dp"
+             android:layout_margin="10dp"
+             android:textColor="@color/black"
+
+             />-->
+
+    </android.support.v4.view.ViewPager>
+
+    <!-- <HorizontalScrollView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:id="@+id/horizontalScrollView"
+         android:layout_below="@+id/header_relative_layout"
+         android:layout_centerHorizontal="true" />-->
+
+
+</RelativeLayout>
+

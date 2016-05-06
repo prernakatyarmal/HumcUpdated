@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/help_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B3000000">
+
+    <RelativeLayout
+        android:id="@+id/help_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        >
+
+        <TextView
+            android:id="@+id/help_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/arrow_up"
+            android:textColor="#3e9e33"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/help_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/help_arrow"
+            android:text="@string/direction_help_text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_font_small" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tap_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="@string/tap_to_dismiss"
+        android:textColor="#aaaaaa"
+        android:textSize="@dimen/txt_font_small" />
+</RelativeLayout>

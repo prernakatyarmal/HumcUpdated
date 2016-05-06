@@ -1,0 +1,298 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!--<TextView
+        android:id="@+id/dummy_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="FRONT"
+        android:layout_centerInParent="true"
+        />-->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:weightSum="2.05"
+        android:background="@color/primaryColor"
+        android:id="@+id/linear_bottom_layout"
+        android:elevation="5dp">
+
+        <RelativeLayout
+            android:id="@+id/front_relative_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <View
+                android:id="@+id/front_tab_line"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="@color/accentColor"
+                android:layout_alignParentTop="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/front_str"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+       <View
+            android:layout_width="10dp"
+            android:layout_height="35dp"
+            android:background="@color/tabColor"
+            android:layout_weight="0.05"
+           android:layout_marginTop="@dimen/padding5"
+           android:layout_marginBottom="@dimen/padding5"
+           />
+
+        <RelativeLayout
+            android:id="@+id/back_relative_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <View
+                android:id="@+id/back_tab_line"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="@color/accentColor"
+                android:layout_alignParentTop="true"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/back_str"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linear_bottom_layout"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/body_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            />
+
+        <ImageView
+            android:id="@+id/body_highlight_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            />
+
+        <TextView
+            android:id="@+id/reset_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_below="@+id/body_image"
+            android:visibility="gone"
+            android:text="@string/reset_str"
+            android:padding="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/primaryColor"
+            android:clickable="true"
+            />
+
+        <!--<TextView
+            android:id="@+id/skin_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="15dp"
+            android:layout_below="@+id/body_image"
+            android:visibility="gone"
+            android:text="Skin"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/primaryColor"
+            android:clickable="true"
+            />-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/relative_body_touch">
+
+            <RelativeLayout
+                android:id="@+id/relative_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                />
+
+            <RelativeLayout
+                android:id="@+id/relative_chest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/relative_head"
+                />
+
+            <RelativeLayout
+                android:id="@+id/relative_left_shoulder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/relative_head"
+                android:layout_toLeftOf="@+id/relative_chest"
+                />
+
+            <RelativeLayout
+                android:id="@+id/relative_right_shoulder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/relative_head"
+                android:layout_toRightOf="@+id/relative_chest"
+                />
+
+            <RelativeLayout
+                android:id="@+id/relative_abdomen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/relative_chest"
+                />
+
+            <RelativeLayout
+                android:id="@+id/relative_genital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/relative_abdomen"
+                />
+
+            <RelativeLayout
+                android:id="@+id/relative_leg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/relative_genital"
+                />
+
+            <RelativeLayout
+                android:id="@+id/relative_foot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/relative_leg"
+                />
+
+            <RelativeLayout
+                android:id="@+id/relative_left_hand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/relative_left_shoulder"
+                android:layout_toLeftOf="@+id/relative_chest"
+                />
+
+            <RelativeLayout
+                android:id="@+id/relative_right_hand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/relative_right_shoulder"
+                android:layout_toRightOf="@+id/relative_chest"
+                />
+
+            <TextView
+                android:id="@+id/skin_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="15dp"
+                android:padding="15dp"
+                android:visibility="gone"
+                android:text="@string/skin_str"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/primaryColor"
+                android:clickable="true"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/relative_head_touch">
+
+            <RelativeLayout
+                android:id="@+id/relative_brain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                />
+
+            <RelativeLayout
+                android:id="@+id/relative_eyes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                />
+
+            <RelativeLayout
+                android:id="@+id/relative_nose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                />
+
+            <RelativeLayout
+                android:id="@+id/relative_ears_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                />
+
+            <RelativeLayout
+                android:id="@+id/relative_ears_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                />
+
+            <RelativeLayout
+                android:id="@+id/relative_mouth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                />
+
+            <RelativeLayout
+                android:id="@+id/relative_neck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

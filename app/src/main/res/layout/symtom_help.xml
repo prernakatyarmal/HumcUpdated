@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/symtom_help_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/help_bg_color">
+
+    <RelativeLayout
+        android:id="@+id/body_help_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp" android:layout_alignParentRight="true">
+
+        <TextView
+            android:id="@+id/body_help_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/body_help_arrow"
+            android:gravity="center"
+            android:text="@string/sym_body_help_text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_font_small" />
+
+        <TextView
+            android:id="@+id/body_help_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/arrow_left"
+            android:textColor="#3e9e33"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tab_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tap_tv"
+        android:layout_alignParentRight="true">
+
+        <TextView
+            android:id="@+id/tab_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/sym_tab_help_text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_font_small" />
+
+        <TextView
+            android:id="@+id/tab_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tab_tv"
+            android:layout_centerHorizontal="true"
+            android:text="@string/arrow_down"
+            android:textColor="#3e9e33"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tap_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="@string/tap_to_dismiss"
+        android:textColor="@color/tap_dismiss_color"
+        android:textSize="@dimen/txt_font_small" />
+</RelativeLayout>

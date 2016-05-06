@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bef_login_help_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/help_bg_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/drawer_help_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/drawer_help_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/padding10"
+            android:layout_toRightOf="@+id/drawer_arrow"
+            android:text="@string/drawer_help_text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_font_small" />
+
+        <TextView
+            android:id="@+id/drawer_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/padding10"
+            android:text="@string/arrow_left"
+            android:textColor="@color/arrow_color"
+            android:textSize="@dimen/txt_font_small"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/search_help_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/drawer_help_tv"
+            android:layout_centerHorizontal="true"
+            android:text="@string/arrow_down"
+            android:textColor="@color/arrow_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/apt_help_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/padding10"
+        android:layout_marginTop="@dimen/padding15">
+
+        <TextView
+            android:id="@+id/apt_help_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/arrow_left"
+            android:textColor="@color/arrow_color"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/apt_help_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/apt_help_arrow"
+            android:text="@string/landing_apt_help_text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_font_small" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sym_help_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/sym_help_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/arrow_left_curve"
+            android:textColor="#3e9e33"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/sym_help_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/sym_help_arrow"
+            android:text="@string/landing_sym_help_text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_font_small" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tap_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="@string/tap_to_dismiss"
+        android:textColor="@color/tap_dismiss_color"
+        android:textSize="@dimen/txt_font_small" />
+</RelativeLayout>

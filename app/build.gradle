@@ -1,0 +1,84 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.0'
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "com.hackensack.umc"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dexOptions {
+//        incremental false
+//        preDexLibraries = false
+//        jumboMode = false
+//        javaMaxHeapSize "2048M"
+        javaMaxHeapSize "4g"
+    }
+//
+//    project.tasks.withType(com.android.build.gradle.tasks.Dex) {
+//        additionalParameters=['--core-library']
+//    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'ChangeLog.wiki'
+        exclude 'META-INF/services/com.phloc.commons.thirdparty.IThirdPartyModuleProviderSPI'
+        exclude 'NOTICE'
+        exclude 'changelog.xml'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'MANIFEST.MF'
+    }
+
+//    useLibrary  'org.apache.http.legacy'
+
+}
+
+dependencies {
+ compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.android.support:cardview-v7:23.0.1'
+    compile 'com.android.support:support-v4:23.0.1'
+    compile 'com.android.support:recyclerview-v7:23.0.1'
+    compile 'com.google.android.gms:play-services:8.1.0'
+    compile 'com.android.support:multidex:1.0.0'
+    compile 'com.android.support:design:23.0.1'
+    compile files('libs/httpmime-4.1.1.jar')
+    compile files('libs/gson-1.7.jar')
+compile project(':MyChartMobile-Android')
+    //    compile files('libs/commons-lang3-3.3.2.jar')
+    //    compile files('libs/hapi-fhir-base-1.1.jar')
+    //    compile files('libs/hapi-fhir-structures-dstu2-1.1.jar')
+    //    compile files('libs/httpclient-4.3-beta1.jar')
+    //    compile files('libs/httpclient-4.4.jar') {
+    //        exclude module: 'support-v4'
+    //    }
+    //    compile files('libs/javax.json-1.0.4.jar')
+    //    compile files('libs/phloc-commons-4.3.6.jar')
+    //    compile files('libs/phloc-schematron-2.7.1.jar')
+    //    compile files('libs/slf4j-api-1.7.10.jar')
+    //    compile files('libs/stax-api-1.0-2.jar')
+    //    compile files('libs/hapi-fhir-android-1.2.jar')
+    //    compile group: 'ca.uhn.hapi.fhir', name: 'hapi-fhir-android', version: '1.2'
+    //    compile group: 'ca.uhn.hapi.fhir', name: 'hapi-fhir-android', version: '1.2'
+    //    compile 'ca.uhn.hapi.fhir:hapi-fhir-base:1.1'
+    //    compile ('ca.uhn.hapi.fhir:hapi-fhir-structures-dstu2:1.1')
+    //    compile 'ca.uhn.hapi.fhir:hapi-fhir-structures-dstu:1.1'
+    //    compile 'ca.uhn.hapi.fhir:hapi-fhir-base:1.1'
+    //    compile 'ca.uhn.hapi.fhir:hapi-fhir-structures-dstu2:1.1'
+}

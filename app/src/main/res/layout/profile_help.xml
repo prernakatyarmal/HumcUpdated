@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/profile_help_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B3000000">
+
+    <RelativeLayout
+        android:id="@+id/profile_help_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/profile_help_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/arrow_up"
+            android:textColor="#3e9e33"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/profile_help_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/profile_help_arrow"
+            android:text="@string/instructions"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_font_small" />
+
+        <LinearLayout
+            android:id="@+id/layout_instruction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_help_arrow"
+            android:layout_marginTop="@dimen/margin_ex_larg"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/profile_tap_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/profile_suggestion_text_1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_font_small" />
+
+            <TextView
+                android:id="@+id/profile_tap_tv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:gravity="center"
+                android:text="@string/profile_suggestion_text_2"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_font_small" />
+
+            <TextView
+                android:id="@+id/profile_tap_tv_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:gravity="center"
+                android:text="@string/profile_suggestion_text_3"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_font_small" />
+
+            <TextView
+                android:id="@+id/profile_tap_tv_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:gravity="center"
+                android:text="@string/profile_suggestion_text_4"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_font_small" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtCoachMarks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_instruction"
+            android:layout_marginTop="30dp"
+            android:gravity="center_horizontal"
+            android:text="@string/coach_marks_profile_text"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/txt_font_small" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/layoutStepInstruction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right"
+           >
+            <TextView
+                android:id="@+id/txtStepsArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_ex_larg"
+                android:text="@string/arrow_left"
+                android:textColor="#3e9e33"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/margin_ex_larg"/>
+            <TextView
+                android:id="@+id/txtSteps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_ex_larg"
+                android:gravity="center_horizontal"
+                android:text="@string/steps"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/txt_font_small" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tap_tv_dismiss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="@string/tap_to_dismiss"
+            android:textColor="#aaaaaa"
+            android:textSize="@dimen/txt_font_small" />
+    </LinearLayout>
+</RelativeLayout>

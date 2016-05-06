@@ -1,0 +1,149 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/ic_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/profile_manual_grey"
+            android:gravity="center"
+            android:paddingBottom="@dimen/padding10"
+            android:paddingLeft="@dimen/margin_small"
+            android:paddingRight="@dimen/margin_small"
+            android:paddingTop="@dimen/padding10"
+            android:text="@string/selfie_screen_message"
+            android:textColor="@color/white"  />
+
+
+        <LinearLayout
+            android:id="@+id/selfie_img_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/ic_img_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/selfie_img"
+                    style="@style/profile_image_view"
+                    android:layout_gravity="center"
+                    android:src="@drawable/selfi_default_img" />
+
+                <TextView
+                    android:id="@+id/txtSelfieSet"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/selfie_message"
+                    android:textColor="@color/black" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:gravity="center"
+                android:text="@string/step_1_of_3"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/layoutStepsButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/blue_circle" />
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/gray_circle" />
+
+                <ImageView
+                    android:id="@+id/imgStepLast"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/gray_circle" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bottom_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_btn_ht"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/margin_medium"
+                android:paddingLeft="@dimen/margin_medium"
+                android:paddingRight="@dimen/margin_medium">
+
+                <Button
+                    android:id="@+id/manual_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/profile_manual_grey"
+                    android:gravity="center"
+                    android:padding="@dimen/padding7"
+                    android:text="@string/profile_manual_btn_str"
+                    android:textColor="@color/white" />
+
+                <View
+                    android:layout_width="@dimen/padding10"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/proceed_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/profile_proceed_green"
+                    android:gravity="center"
+                    android:padding="@dimen/padding7"
+                    android:text="@string/profile_proceed_btn_str"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fragmentIcContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"></LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

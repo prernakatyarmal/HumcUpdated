@@ -1,0 +1,6 @@
+/*
+ * (C) Copyright 2015 Epic Systems Corporation
+ */
+
+configurations.create("default")
+artifacts.add("default", file('MyChartRef-thin-release.aar'))

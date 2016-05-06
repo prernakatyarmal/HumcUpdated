@@ -1,0 +1,96 @@
+{
+    "gender": "male",
+    "address": [
+        {
+            "use": "home",
+            "line": [
+                "71 FOX HOLLOW DR",
+                null
+            ],
+            "state": "PA",
+            "city": "DALLAS",
+            "country": "en-US",
+            "postalCode": "18612-8902",
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/us-core-county",
+                    "valueString": "Orange County"
+                }
+            ]
+        }
+    ],
+    "active": "true",
+    "telecom": [
+        {
+            "system": "phone",
+            "value": "570-371-9646",
+            "use": "mobile"
+        },
+        {
+            "system": "email",
+            "value": "chuckchesk@gmail.com",
+            "use": "home"
+        },
+                                {
+            "system": "phone",
+            "value": "",
+            "use": "home"
+        },
+                                {
+            "system": "phone",
+            "value": "",
+            "use": "work"
+        }
+    ],
+    "birthDate": "1957-12-05",
+    "maritalStatus": {
+        "coding": [
+            {
+                "system": "http://hl7.org/fhir/v3/MaritalStatus",
+                "code": "M",
+                "display": "Married"
+            }
+        ],
+        "text": "Getrouwd"
+    },
+    "text": {
+        "status": "generated",
+        "div": "<div>!-- Snipped for Brevity --></div>"
+    },
+    "extension": [
+        {
+            "valueCodeableConcept": [
+                {
+                    "coding": {
+                        "system": "http://hl7.org/fhir/v3/Race",
+                        "code": "1096-7"
+                    }
+                }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/us-core-race"
+        },
+        {
+            "url": "https://www.hl7.org/fhir/location.html",
+            "valueReference": {
+                "reference": "Location/1110101211"
+            }
+        },
+        {
+            "url": "http://hl7.org/fhir/StructureDefinition/us-core-race",
+            "valueCodeableConcept": [
+                {
+                    "coding": {
+                        "system": "http://hl7.org/fhir/v3/Ethnicity",
+                        "code": "2162-6"
+                    }
+                }
+            ]
+        }
+    ],
+    "resourceType": "Patient",
+    "name": {
+        "use": "official",
+        "given": "CHARLES",//no not allowed.
+        "family": "CHESKIEWICZ"
+    }
+}

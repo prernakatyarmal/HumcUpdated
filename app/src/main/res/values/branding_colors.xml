@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Set to the default patient color -->
+    <color name="Branding_PortraitColor00">@color/primaryColor</color>
+    <!-- Set to the second patient color -->
+    <color name="Branding_PortraitColor01">@color/primaryColor</color>
+    <!-- Set to the third patient color -->
+    <color name="Branding_PortraitColor02">@color/primaryColor</color>
+    <!-- Set to the fourth patient color -->
+    <color name="Branding_PortraitColor03">@color/primaryColor</color>
+    <!-- Set to the fifth patient color -->
+    <color name="Branding_PortraitColor04">@color/primaryColor</color>
+    <!-- Set to the sixth patient color -->
+    <color name="Branding_PortraitColor05">@color/primaryColor</color>
+    <!-- Set to the seventh patient color -->
+    <color name="Branding_PortraitColor06">@color/primaryColor</color>
+    <!-- Set to the color used for the login page's background -->
+    <color name="Branding_LoginBackground">#B2D3FF</color>
+
+    <!-- Uncomment each portrait color used -->
+    <array name="Branding_PortraitColors">
+
+        <item>@color/Branding_PortraitColor00</item>
+        <item>@color/Branding_PortraitColor01</item>
+        <item>@color/Branding_PortraitColor02</item>
+        <item>@color/Branding_PortraitColor03</item>
+        <item>@color/Branding_PortraitColor04</item>
+        <item>@color/Branding_PortraitColor05</item>
+		<item>@color/Branding_PortraitColor06</item>
+
+    </array>
+
+    <!-- Set to the count of portrait colors in use -->
+    <integer name="Branding_NumberOfColors">7</integer>
+
+</resources>

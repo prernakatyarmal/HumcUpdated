@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hackensack.umc"
+    android:versionCode="13"
+    android:versionName="13.7" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <!--
+ The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but are recommended.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/humc_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <!--
+            <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_maps_key" />
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyC8xp2e1VThnmHW18bnJPSA8dnXZzuWWvk" />
+        <!-- android:value="AIzaSyDVa2P_2m_bVBNZ_ozLzsADVQZFHPH41WA" /> -->
+
+        <activity
+            android:name=".activity.SplashActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.HackensackUMCActivity"
+            android:label="@string/title_activity_hackensack_umc"
+            android:screenOrientation="portrait" >
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".activity.DependentDetailsActivity"
+            android:label="@string/title_activity_dependent"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.DependentCreatePasswordActivity"
+            android:label="@string/title_activity_create_creadentials"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activity.DoctorSearchActivity"
+            android:label="@string/title_activity_doctor_search"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name=".activity.DoctorResultActivity"
+            android:label="@string/title_activity_doctor_result"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name=".activity.DoctorFilterActivity"
+            android:label="@string/title_activity_doctor_filter"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name=".activity.SymptomCheckerActivity"
+            android:label="@string/title_activity_symptom_checker"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name=".activity.DoctorDetailActivity"
+            android:label="@string/title_activity_doctor_schedule_appointment"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name=".activity.DirectionsListActivity"
+            android:label="@string/title_activity_direction_list"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.DirectionMapsActivity"
+            android:label="@string/title_activity_direction_maps"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.SymptomListActivity"
+            android:label="@string/title_activity_symptom_list"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name=".activity.SymptomDetailActivity"
+            android:label="@string/title_activity_symptom_list"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.SymptomSpecialtyListActivity"
+            android:label="@string/title_activity_symptom_list"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".activity.FavoriteDoctorList"
+            android:label="@string/title_activity_favourite"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.NewsActivity"
+            android:label="@string/title_activity_news"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.AboutActivity"
+            android:label="@string/title_activity_about"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.WebViewActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.DoctorOfficeDetailActivity"
+            android:label="@string/title_activity_doctor_detail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.DoctorAppointmentSummaryActivity"
+            android:label="@string/title_activity_appointment_summery"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- Registration -->
+        <activity
+            android:name=".activity.RegistrationDetailsActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_registration_details"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AddressActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_address"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.InsuranceInfoActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_insurance_info"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.QuetionsActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_question"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BaseActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_base"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.CreatePasswordActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_create_password"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <service android:name=".datastructure.RssService" />
+
+        <activity
+            android:name=".activity.ViewAppointmentActivity"
+            android:label="@string/title_activity_view_appointment"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.ViewProfileActivity"
+            android:label="@string/title_activity_view_profile"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.ProfileSelfieActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_profile_selfie"
+            android:launchMode="standard"
+            android:noHistory="false"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.VisitTypeListActivity"
+            android:label="@string/title_activity_visit_type"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.ConsentSearchActivity"
+            android:label="@string/title_activity_consent_search"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.ConsentResultActivity"
+            android:label="@string/title_activity_consent_search"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <receiver android:name=".util.TokenExpiryReceiver" />
+        <receiver android:name=".util.DeviceTimedOutReceiver" />
+        <!-- Mychart Library Activities -->
+
+        <activity
+            android:name="epic.mychart.android.library.appointments.AppointmentsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.appointments.CancelAppointmentActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="epic.mychart.android.library.appointments.FutureAppointmentActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.appointments.PastAppointmentActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.appointments.WebSchedulingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.appointments.WebCheckInOnlineActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.appointments.WebPostCheckInOnlineActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.appointments.WebAppointmentQuestionnairesActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.customactivities.TitledWebViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.healthadvisories.HealthAdvisoriesActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.healthadvisories2013.HealthAdvisoriesActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.healthsummary.HealthSummaryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.medications.MedicationBodyActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.medications.MedicationsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.messages.ComposeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="epic.mychart.android.library.messages.MessageBodyActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.messages.WebMessageTasksActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.messages.MessagesActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.preferences.PreferencesActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.preferences.WPPreferencesFragmentActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.prelogin.EULAActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.prelogin.LoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="epic.mychart.android.library.prelogin.TermsConditionsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.prelogin.WebServerListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="epic.mychart.android.library.scheduling.ScheduleStartActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.scheduling.SlotsViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.scheduling.SlotReviewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/LibraryTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="epic.mychart.android.library.springboard.MainActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.testresults.TestResultDetailActivity"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.testresults.TestResultsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.medications.MedRefillListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.medications.MedRefillActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.medications.MedRefillPharmaciesListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="epic.mychart.android.library.prelogin.PreferredProvidersActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.prelogin.TellUsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.billing.BillingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.billing.BillPaymentActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="epic.mychart.android.library.billing.AddNewCardActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.billing.PaymentConfirmationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.billing.BillingDetailsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.billing.RecentPaymentsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.billing.RecentStatementActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.billing.PaperlessSignupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.telemedicine.vidyo.VidyoVisitActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.prelogin.TwoFactorActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.device.DeviceActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.customactivities.JavaScriptWebViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.questionnaires.WebQuestionnairesActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.insurance.InsuranceActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LibraryTheme" />
+        <activity
+            android:name="epic.mychart.android.library.insurance.CoverageDetailsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="landscape"
+            android:theme="@style/LibraryTheme" />
+
+        <service android:name="epic.mychart.android.library.telemedicine.StayLoggedInService" />
+        <service android:name="epic.mychart.android.library.telemedicine.StreamingStatusService" />
+        <service
+            android:name=".datastructure.OnClearFromRecentService"
+            android:stopWithTask="false" />
+
+        <activity
+            android:name=".activity.ProxyAccessNavActivity"
+            android:label="@string/title_activity_proxy_access_nav" >
+        </activity>
+        <activity android:name=".custom_camera.Custom_CameraActivity" >
+        </activity>
+        <activity
+            android:name=".activity.ProfileSelfieActivityCustomeCam"
+            android:label="@string/title_activity_profile_selfie"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".camera.CameraTestActivity"
+            android:label="@string/camera"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

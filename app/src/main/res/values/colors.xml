@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--<color name="primaryColor">#3F51B5</color>-->
+    <color name="primaryColor">#005daa</color>
+    <color name="primaryColorDark">#0058a1</color>
+    <color name="accentColor">#4aaa42</color>
+
+    <color name="light_blue">#0087f7</color>
+
+    <color name="tabColor">#0173D0</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="red">#F44336</color>
+    <color name="grey">#2f4f4f</color>
+
+    <color name="light_grey">#f1f5f7</color>
+    <color name="dark_grey">#d3d3d3</color>
+    <!--<color name="light_light_grey">#f1f5f7</color>-->
+
+    <color name="profile_manual_grey">#999999</color>
+    <color name="profile_proceed_green">#4aaa42</color>
+
+    <!--<color name="semi_tranparent_black">#66070719</color>-->
+
+    <color name="semi_tranparent_white">#DDFFFFFF</color>
+
+    <color name="tranparent">#00000000</color>
+    <color name="arrow_color">#3e9e33</color>
+    <color name="help_bg_color">#B3000000</color>
+    <color name="tap_dismiss_color">#aaaaaa</color>
+
+    <!--Mychart Colors-->
+    <color name="bluePrimary">#2962C3</color>
+    <color name="bluePrimaryDark">#0E2244</color>
+    <color name="blueAccent">#6487C3</color>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- This string MUST be changed to not include MyChart -->
+    <string name="app_name1">MyChart</string>
+    <!-- Appears on the login screen as the hint for the username edittext -->
+    <string name="Branding_Login_UsernameHint"></string>
+    <!-- Appears on the login screen as the hint for the password edittext -->
+    <string name="Branding_Login_PasswordHint"></string>
+    <!-- Should be the name of your organization -->
+    <string name="Branding_OrganizationName">Epic Medical Center</string>
+    <!-- Change to your MyChart brand name -->
+    <string name="Branding_MyChartBrandName">MyChart</string>
+
+</resources>

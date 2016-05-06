@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Set to the full URL pointing to your RESTful MyChartMobile services -->
+    <string name="Branding_URL">https://mychartfhir.hackensackumc.net/interconnect-mychartfhir/WCF/epic.mychartmobile/mychartmobile.svc/rest</string>
+    <!--<string name="Branding_URL">https://mychart.humed.com/Interconnect-MychartPRD/WCF/epic.mychartmobile/mychartmobile.svc/rest</string>-->
+    <!-- Set to the two-letter ISO 639-1 language code for the default language. Default is en. -->
+    <string name="Branding_DefaultLanguage">en</string>
+    <!-- Set to a comma-delimited list of the two-letter ISO 639-1 language codes that are allowed in the app. Default is en. -->
+    <string name="Branding_AllowedLanguages">en,es</string>
+    <!-- Set to the two-letter ISO 639-1 language code followed by a '-' followed by the ISO 3166-2 region code for the language and region you want to display dates in -->
+    <string name="Branding_FormatterLocale">en-US</string>
+    <!-- Set to your organization ID as in the TRACK environment -->
+    <string name="Branding_OrganizationID">701</string>
+
+    <!-- Populate with those hostnames for webpages that should be opened within this app on the pre-login page -->
+    <string-array name="Branding_Login_AllowedHosts">
+        <!-- <item></item> -->
+    </string-array>
+
+    <!-- Set to the URL you want to use for the pre-login page -->
+    <string name="Branding_Login_URL"></string>
+
+</resources>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        card_view:cardElevation="4dp"
+        android:layout_margin="5dp"
+        android:layout_below="@+id/header_relative_layout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/address_text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                />
+
+            <!--<TextView
+                android:id="@+id/address_text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Dr. Joseph M. Smith"
+                android:layout_below="@+id/address_text1"/>-->
+
+            <TextView
+                android:id="@+id/distance_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@+id/address_text1"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/distance_text"
+                android:layout_marginTop="5dp"
+                android:id="@+id/call_linear_layout">
+
+                <ImageView
+                    android:id="@+id/call_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/phone_icon"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/call_display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/primaryColor"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/distance_text"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentRight="true">
+
+                <ImageView
+                    android:id="@+id/direction_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/direction_grey_icon"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/direction_display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/directions"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/primaryColor"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/profile_manual_grey"
+                android:layout_below="@+id/call_linear_layout"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/line_view"/>
+
+            <TextView
+                android:id="@+id/first_available_time_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/first_available_time_text"
+                android:layout_below="@+id/line_view"
+                android:textColor="@color/grey"
+                />
+
+            <TextView
+                android:id="@+id/more_available_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/more_available_time_text"
+                android:layout_below="@+id/line_view"
+                android:textColor="@color/grey"
+                android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:id="@+id/first_available_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@+id/first_available_time_label"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
+

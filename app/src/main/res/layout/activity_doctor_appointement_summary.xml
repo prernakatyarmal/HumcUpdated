@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/top_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <!--<RelativeLayout
+        android:id="@+id/header_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/primaryColor">
+
+        <ImageView
+            android:id="@+id/back_img"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:padding="15dp"
+            android:src="@drawable/back_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_toRightOf="@+id/back_img"
+            android:gravity="center_vertical"
+            android:text="@string/title_activity_appointment_summery"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        &lt;!&ndash;<ImageView
+            android:id="@+id/done_img"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/done_icon"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:foregroundGravity="center_vertical"/>&ndash;&gt;
+
+    </RelativeLayout>-->
+
+    <!--<TextView
+        android:id="@+id/time_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_action_bar"
+        android:background="@color/primaryColor"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:text="@string/select_office_time_text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/light_grey" />
+
+    <TextView
+        android:id="@+id/date_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/time_text"
+        android:background="@color/primaryColor"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:text="@string/select_office_time_text"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/light_grey" />-->
+
+    <RelativeLayout
+        android:id="@+id/header_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:paddingTop="5dp">
+
+        <ImageView
+            android:id="@+id/doctor_img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"
+            android:gravity="center_horizontal"
+            android:src="@drawable/male" />
+
+        <TextView
+            android:id="@+id/speciality_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@+id/doctor_img"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/name_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/speciality_text"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@+id/doctor_img"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:id="@+id/address_one_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name_text"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@+id/doctor_img"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+             />
+
+        <TextView
+            android:id="@+id/dist_mile_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/address_one_text"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/doctor_img"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/doctor_common_ll"
+        layout="@layout/doctor_contact_common"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_relative_layout" />
+
+    <View
+        android:id="@+id/dummy_view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/doctor_common_ll"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/profile_manual_grey"/>
+
+    <TextView
+        android:id="@+id/appointment_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dummy_view1"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:background="@color/white"
+        android:text="@string/appointment_detail"/>
+
+    <TextView
+        android:id="@+id/time_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appointment_text"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="@string/select_office_time_text"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/black"
+        android:background="@color/white"
+        android:textStyle="bold"/>
+
+    <!--<TextView
+        android:id="@+id/date_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/time_text"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:text="@string/select_office_time_text"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/black"
+        android:background="@color/white"
+        android:elevation="5dp"
+        android:textStyle="bold"/>-->
+
+   <!-- <View
+        android:id="@+id/dummy_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        android:layout_below="@id/date_text"/>-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/time_text">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/display_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:gravity="center"
+                android:text="@string/appointment_text" />
+
+            <LinearLayout
+                android:id="@+id/change_make_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/make_appointment_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:background="@color/profile_proceed_green"
+                    android:padding="5dp"
+                    android:text="@string/make_appointment_text"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/change_appointment_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:background="@color/profile_manual_grey"
+                    android:padding="5dp"
+                    android:text="@string/change_appointment_text"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/done_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/done_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:background="@color/profile_proceed_green"
+                    android:padding="5dp"
+                    android:text="@string/done"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
+

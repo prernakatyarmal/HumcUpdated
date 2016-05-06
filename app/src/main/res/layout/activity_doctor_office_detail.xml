@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey">
+
+    <!--<RelativeLayout
+        android:id="@+id/header_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/primaryColor">
+
+        <ImageView
+            android:id="@+id/back_img"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/back_arrow"
+            android:layout_marginLeft="5dp"
+            android:padding="15dp"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white"
+            android:layout_margin="3dp"
+            android:layout_toRightOf="@+id/back_img"
+            android:text="Doctor Details"
+            android:gravity="center_vertical"
+            android:textStyle="bold"/>
+
+        &lt;!&ndash;<ImageView
+            android:id="@+id/done_img"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/done_icon"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:foregroundGravity="center_vertical"/>&ndash;&gt;
+
+    </RelativeLayout>-->
+
+<!--    <TextView
+        android:id="@+id/select_office_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="@string/select_office_time_text"
+        android:layout_below="@id/header_action_bar"
+        android:background="@color/primaryColor"
+        android:textColor="@color/light_blue"
+        android:textAppearance="?android:attr/textAppearanceSmall"/>-->
+
+    <RelativeLayout
+        android:id="@+id/header_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:background="@color/white"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/doctor_img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:gravity="center_horizontal"
+            android:src="@drawable/male"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/doctor_img"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/speciality_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_marginBottom="2dp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/name_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/select_office_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/select_office_time_text"
+        android:layout_below="@id/header_relative_layout"
+        android:textColor="@color/black"
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/select_office_text">
+
+        <LinearLayout
+            android:id="@+id/address_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--<ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"/>-->
+
+        </LinearLayout>
+
+    </ScrollView>
+    <!--<android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        card_view:cardElevation="4dp"
+        android:layout_margin="5dp"
+        android:layout_below="@+id/header_relative_layout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/address_text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Dr. Joseph M. Smith"
+                />
+
+            <TextView
+                android:id="@+id/address_text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Dr. Joseph M. Smith"
+                android:layout_below="@+id/address_text1"/>
+
+            <TextView
+                android:id="@+id/distance_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="(1.5 miles)"
+                android:layout_below="@+id/address_text2"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/distance_text"
+                android:layout_marginTop="5dp"
+                android:id="@+id/call_linear_layout">
+
+                <ImageView
+                    android:id="@+id/call_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/phone_icon"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/call_display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="0123456789"
+                    android:layout_below="@+id/address_text2"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/primaryColor"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/distance_text"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentRight="true">
+
+                <ImageView
+                    android:id="@+id/direction_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/direction_grey_icon"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/direction_display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/directions"
+                    android:layout_below="@+id/address_text2"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/primaryColor"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/profile_manual_grey"
+                android:layout_below="@+id/call_linear_layout"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/line_view"/>
+
+            <TextView
+                android:id="@+id/first_available_time_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/first_available_time_text"
+                android:layout_below="@+id/line_view"
+                android:textColor="@color/grey"
+                />
+
+            <TextView
+                android:id="@+id/more_available_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/more_available_time_text"
+                android:layout_below="@+id/line_view"
+                android:textColor="@color/grey"
+                android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:id="@+id/first_available_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="12:30 PM, Aug 3, Wed"
+                android:layout_below="@+id/first_available_time_label"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>-->
+
+
+</RelativeLayout>
+

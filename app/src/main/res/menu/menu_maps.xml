@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/curr_loc"
+        android:orderInCategory="100"
+        android:title="@string/curr_loc"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/home_addr"
+        android:orderInCategory="100"
+        android:title="@string/home_add"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/work_addr"
+        android:orderInCategory="100"
+        android:title="@string/work_add"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/hackensack_addr"
+        android:orderInCategory="100"
+        android:title="@string/hacensack_addr"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/other_addr"
+        android:orderInCategory="100"
+        android:title="@string/other_add"
+        app:showAsAction="never" />
+</menu>
